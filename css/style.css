@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+html, body {
+  /*width: 100%;*/
+  height: 100%;
+  background: #aad9af;
+}
+.sidebar {
+  width: 20%;;
+  height: 100%;
+  position: fixed;
+}
+.sidebar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.side-content {
+  padding: 160px 40px 0;
+  font-size: 13px;
+  color: #0a8224;
+}
+
+#menu {
+  position: absolute; 
+  right: -20px; 
+  top: 50%; 
+  width: 40px; 
+  margin-top: -170px; 
+  padding: 0; 
+  list-style-type: none;
+}
+#menu li { 
+  float: left;
+}
+#menu a { 
+  display: block;
+  width: 28px; 
+  height: 28px; 
+  margin: 20px 6px; 
+  border-radius: 14px; 
+  text-indent: -9999px; 
+  overflow: hidden; 
+  background-color: #c0b7a6; 
+  background-position: 50%; 
+  background-repeat: no-repeat;
+}
+/*#menu .a1 { 
+  background-image: url(images/df-01.png);
+}
+#menu .a2 { 
+  background-image: url(images/df-02.png);
+}
+#menu .a3 { 
+  background-image: url(images/df-03.png);
+}
+#menu .a4 { 
+  background-image: url(images/df-04.png);
+}
+#menu .a5 { 
+  background-image: url(images/df-05.png);
+}*/
+#menu a:hover, #menu .active a { 
+  margin: 14px 0; 
+  border: 6px solid #fff; 
+  box-shadow: 1px 1px 3px 1px #b4d7ed; 
+  border-radius: 20px; 
+  background-color: #b8e683;
+}
+#right-roll {
+  width: 70%;
+  position: relative;
+  left: 390px;
+}
+.section { 
+  position: relative;
+  overflow: hidden;
+  text-align: center; 
+  color: #fff
+  
+}
+.section .bg { 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+.section .bg1 {
+  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-01.png) center;
+}
+.section .bg2 {
+  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-02.png) center;
+}
+.section .bg3 {
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-03.png) center;
+}
+.section .bg4 {
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-04.png) center;
+}
+.section .bg5 {
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-05.png) center;
+}
+/*个人信息*/
+.personal-info {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 60%;
+  height: 70%;
+  margin: 0 0 0 -350px;
+  font-size: 24px;
+  color: #276446;
+  transition: all 1s;
+}
+.avatar {
+  display: inline-block;
+  width: 200px;
+  height: 200px; 
+  border: 10px solid #b8e683;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 110px;
+}
+.link-list {
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+.link {
+  display: block;
+  height: 75px;
+  width: 75px;
+  border: 7px solid #b8e683;
+  border-radius: 50%;
+  text-indent: -9999em;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s ease-in;
+  margin-bottom: 35px;
+}
+#link-github {
+  background: url(../image/github.png) no-repeat center;
+}
+#link-email {
+  background: url(../image/email.png) no-repeat center;
+}
+.link:hover {
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg);
+}
+/*个人评价*/
+.self-evaluation {
+  width: 40%;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+.self-evaluation h2 {
+  font-size: 48px;
+  color: #108b58;
+  letter-spacing: 15px;
+}
+.self-evaluation p {
+  font-size: 16px;
+  color: #26af77;
+  line-height: 32px;
+  text-indent: 2em;
+  text-align: left;
+}
+
+/*专业技能*/
+.professional-skills {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+}
+.professional-skills h2 {
+  font-size: 48px;
+  color: #23aeb0;
+  letter-spacing: 15px;
+  position: relative; 
+  right: -300%;
+}
+.skills-list {
+  position: relative;
+  left: -260%;
+}
+.tag-panel {
+    margin: 15px auto
+}
+.tag {
+    background-color: #1c9496;
+    color: #aee2d9;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    opacity: 0.5
+}
+.tag.expert {
+    opacity: 1
+}
+.tag.familiar {
+    opacity: 0.75
+}
+/*工作经历*/
+.work-experience {
+  margin: 0 autol
+}
+.work-experience h2 {
+  font-size: 48px;
+  color: #e6ab05;
+  letter-spacing: 15px;
+  position: relative; 
+  left: -380%;
+}
+.work-list {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+}
+.work-list .slide-left {
+  float: left;
+  width: 30%;
+  height: 500px;
+  border-radius: 8px;
+  margin-left: 90px;
+}
+.work-list .slide-right {
+  float: right;
+  width: 45%;
+  height: 500px;
+  border: 1px solid green;
+  margin-right: 90px;
+}
+.slide-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.slide-right {
+  color: #f8ba0a;
+  font-size: 16px;
+  /*line-height: 32px;*/
+}
+.slide-right a {
+  font-size: 28px;
+  color: #fbc11a;
+}
+.slide-right h4 {
+  color: #f5bc1a;
+  font-weight: normal;
+  font-size: 22px;
+}
