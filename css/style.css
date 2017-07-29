@@ -227,7 +227,7 @@ html, body {
 .work-list {
   width: 100%;
   position: absolute;
-  top: 10px;
+  top: 20px;
 }
 .work-list .slide-left {
   float: left;
@@ -251,6 +251,7 @@ html, body {
 .slide-right {
   color: #f8ba0a;
   font-size: 16px;
+  padding: 20px 30px;
   /*line-height: 32px;*/
 }
 .slide-right a {
@@ -261,4 +262,8 @@ html, body {
   color: #f5bc1a;
   font-weight: normal;
   font-size: 22px;
+  text-align: left;
+}
+.slide-right p {
+  text-align: left;
 }
