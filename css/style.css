@@ -6,9 +6,13 @@ a {
 ul {
   list-style: none;
 }
+h5 {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
 
 html, body {
-  /*width: 100%;*/
   height: 100%;
   background: #aad9af;
 }
@@ -76,9 +80,9 @@ html, body {
   background-color: #b8e683;
 }
 #right-roll {
-  width: 70%;
+  width: 63%;
   position: relative;
-  left: 390px;
+  left: 450px;
 }
 .section { 
   position: relative;
@@ -96,19 +100,19 @@ html, body {
   
 }
 .section .bg1 {
-  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-01.png) center;
+  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-01.png) no-repeat center;
 }
 .section .bg2 {
-  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-02.png) center;
+  background: linear-gradient(to right top,rgba(0,0,0,0.1),rgba(0,0,0,0)),url(../image/bg-02.png) no-repeat center;
 }
 .section .bg3 {
-  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-03.png) center;
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-03.png) no-repeat center;
 }
 .section .bg4 {
-  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-04.png) center;
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-04.png) no-repeat center;
 }
 .section .bg5 {
-  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-05.png) center;
+  background: linear-gradient(to right top,rgba(0,0,0,0.2),rgba(0,0,0,0)),url(../image/bg-05.png) no-repeat center;
 }
 /*个人信息*/
 .personal-info {
@@ -117,7 +121,7 @@ html, body {
   top: 10%;
   width: 60%;
   height: 70%;
-  margin: 0 0 0 -350px;
+  margin: 0 0 0 -300px;
   font-size: 24px;
   color: #276446;
   transition: all 1s;
@@ -130,6 +134,11 @@ html, body {
   border-radius: 50%;
   margin-top: 40px;
   margin-left: 110px;
+}
+.avatar img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
 }
 .link-list {
   float: right;
@@ -162,7 +171,7 @@ html, body {
   width: 40%;
   position: absolute;
   top: 10%;
-  left: 15%;
+  left: 20%;
 }
 .self-evaluation h2 {
   font-size: 48px;
@@ -202,15 +211,16 @@ html, body {
     color: #aee2d9;
     border-radius: 3px;
     display: inline-block;
-    padding: 2px 8px;
+    padding: 2px 6px;
     margin-right: 3px;
     margin-bottom: 3px;
     opacity: 0.5
 }
-.tag.expert {
-    opacity: 1
+.expert {
+  padding: 4px 10px;
+  opacity: 1
 }
-.tag.familiar {
+.familiar {
     opacity: 0.75
 }
 /*工作经历*/
@@ -219,7 +229,7 @@ html, body {
 }
 .work-experience h2 {
   font-size: 48px;
-  color: #e6ab05;
+  color: #139725;
   letter-spacing: 15px;
   position: relative; 
   left: -380%;
@@ -227,7 +237,10 @@ html, body {
 .work-list {
   width: 100%;
   position: absolute;
-  top: 20px;
+  top: 50px;
+}
+.slide p {
+  margin: 0 0 0 85px;
 }
 .work-list .slide-left {
   float: left;
@@ -237,33 +250,91 @@ html, body {
   margin-left: 90px;
 }
 .work-list .slide-right {
-  float: right;
-  width: 45%;
+  float: left;
+  width: 40%;
   height: 500px;
-  border: 1px solid green;
-  margin-right: 90px;
+  margin-left: 40px;
+  padding: 50px 0 0 15px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 30px;
+  color: #139725;
 }
 .slide-left img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
 }
-.slide-right {
-  color: #f8ba0a;
-  font-size: 16px;
-  padding: 20px 30px;
-  /*line-height: 32px;*/
+.slide-right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slide-right a {
-  font-size: 28px;
-  color: #fbc11a;
+  color: #139725;
 }
-.slide-right h4 {
-  color: #f5bc1a;
-  font-weight: normal;
-  font-size: 22px;
+.slide-right a:hover {
+  color: #053adf;
+}
+
+.slide-content {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #139725;
+  line-height: 30px;
+  text-align: left; 
+}
+.slide-content-img img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/*兴趣爱好*/
+.interests {
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  text-align: center;
+}
+.interests h2 {
+  font-size: 48px;
+  color: #23aeb0;
+  letter-spacing: 15px;
+}
+.interests-list div {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+.interests-list p {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background: #28b3d6;
+  border: 4px solid #14a2c2;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+/*移动端*/
+/*.personal-details {
+  width: 60%;
+  margin: 0 auto;
+  color: #0a8224;
   text-align: left;
 }
-.slide-right p {
-  text-align: left;
+@media screen and (min-width: 767px) {
+  .visile {
+    display: block!important;
+  }
+  .sidebar {
+    display: none;
+  }
 }
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+  .sidebar {
+    display: block!important;
+  }
+}*/
