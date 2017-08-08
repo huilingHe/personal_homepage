@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,39 +12,35 @@
   <link rel="stylesheet" href="css/style.css">
   <script>
     //获取浏览器页面可见高度和宽度
-var _PageHeight = document.documentElement.clientHeight,
-  _PageWidth = document.documentElement.clientWidth;
-//计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
-var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
-  _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
-//在页面未加载完毕之前显示的loading Html自定义内容
-var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#aad9af;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px;padding: 0 15px; border: 2px solid #95B8E7; border-radius: 15px; color: #696969; font-family:\'Microsoft YaHei\';">页面加载中，请耐心等待...</div></div>';
-//呈现loading效果
-document.write(_LoadingHtml);
+    var _PageHeight = document.documentElement.clientHeight,
+      _PageWidth = document.documentElement.clientWidth;
+    //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+    var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+      _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+    //在页面未加载完毕之前显示的loading Html自定义内容
+    var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#aad9af;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px;padding: 0 15px; border: 2px solid #95B8E7; border-radius: 15px; color: #696969; font-family:\'Microsoft YaHei\';">页面加载中，请耐心等待...</div></div>';
+    //呈现loading效果
+    document.write(_LoadingHtml);
 
-//window.onload = function () {
-//    var loadingMask = document.getElementById('loadingDiv');
-//    loadingMask.parentNode.removeChild(loadingMask);
-//};
+    //监听加载状态改变
+    document.onreadystatechange = completeLoading;
 
-//监听加载状态改变
-document.onreadystatechange = completeLoading;
-
-//加载状态为complete时移除loading效果
-function completeLoading() {
-    if (document.readyState == "complete") {
+    //加载状态为complete时移除loading效果
+    function completeLoading() {
+      if (document.readyState == "complete") {
         var loadingMask = document.getElementById('loadingDiv');
         loadingMask.parentNode.removeChild(loadingMask);
+      }
     }
-}
   </script>
 </head>
+
 <body>
   <div class="sidebar">
     <img src="image/bg-fixed1.png" alt="侧边栏背景图">
     <div class="side-content" id="code"></div>
     <script type="text/javascript">
-     var content = `
+      var content = `
 			<h3>个人信息</h3>
       <br />
 			<p>姓名： 何惠玲</p>
@@ -58,11 +55,11 @@ function completeLoading() {
       <p>微信： hhl1946772492</p>
 			<p>邮箱： 1946772492@qq.com</p>
      `
-     var n = 0;
-     setInterval (function () {
-      code.innerHTML = content.substring(0, n);
-      n ++;
-     }, 70)
+      var n = 0;
+      setInterval(function () {
+        code.innerHTML = content.substring(0, n);
+        n++;
+      }, 70)
     </script>
     <ul id="menu">
       <li class="active" data-menuanchor="page1">
@@ -80,13 +77,13 @@ function completeLoading() {
       <li data-menuanchor="page5">
         <a class="a5" href="#page5" title="致谢"></a>
       </li>
-	  </ul>
+    </ul>
   </div>
 
   <div id="right-roll">
 
-  <!--移动端-->
-  <!--<div class="section visile">
+    <!--移动端-->
+    <!--<div class="section visile">
     <div class="personal-details">
       <h2>个人信息</h2>
       <p>姓名： 何惠玲</p>
@@ -102,7 +99,7 @@ function completeLoading() {
 			<p>邮箱： 1946772492@qq.com</p>
     </div>
   </div>-->
-  <!--移动端 end-->
+    <!--移动端 end-->
     <div class="section">
       <div class="bg bg1">
         <div class="personal-info">
@@ -124,7 +121,7 @@ function completeLoading() {
           <h2>个人评价</h2>
           <p>本人应届毕业生，2016年10月开始，在南京水合网络科技有限公司工作，主要负责还原视觉效果图，编写前端交互页面,根据用户需求完成可用性、易用性、良好交互性、和用户体验的网页有严谨的编码习惯。</p>
           <p>热爱编程，熟悉HTML语言和CSS样式，并且能够熟练使用DIV+CSS进行网页排版以及设计；熟练使用Vue、Ajax、jQuery、javascript、Element、Element-UI等技术；
-          <p>熟练使用VS Code、SublimeText3等开发工具；对Photoshop、Dreamweaver有一定了解。希望在2年内成为独立前端工程师。</p>
+            <p>熟练使用VS Code、SublimeText3等开发工具；对Photoshop、Dreamweaver有一定了解。希望在2年内成为独立前端工程师。</p>
         </div>
       </div>
     </div>
@@ -188,8 +185,8 @@ function completeLoading() {
           <div class="slide">
             <div class="slide-content">
               <div class="slide-content-img">
-              <img src="image/buermami_end.png" alt="">
-            </div>
+                <img src="image/buermami_end.png" alt="">
+              </div>
               <h5>项目名称： 不二妈咪后台管理系统</h5>
               <h5>项目介绍： 不二妈咪后台管理系统，是为做母婴产品的店铺以及店铺管理人员设计的，主要实现对店铺的管理功能。</h5>
               <h5>项目经验： 1. 熟练掌握Vue-resource的使用方法;</h5>
@@ -211,7 +208,7 @@ function completeLoading() {
               <p>2. 通过写不二妈咪App端的页面，了解了Vue中使用Tel拨打电话的功</p>
               <p>3. 利用Vue制作弹框</p>
             </div>
-            
+
           </div>
         </div>
 
@@ -229,9 +226,9 @@ function completeLoading() {
             </div>
             <div>
               <p class="familiar">读书</p>
-              <p class="expert">敲代码</p>  
-            </div> 
-            <div>   
+              <p class="expert">敲代码</p>
+            </div>
+            <div>
               <p class="expert">旅游</p>
               <p class="familiar">健身</p>
             </div>
@@ -242,8 +239,10 @@ function completeLoading() {
     <!--第五屏 end-->
   </div>
 </body>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+
 </html>
