@@ -1,3 +1,4 @@
+
 // $(function(){
 //   $('#right-roll').fullpage({
 //     slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
@@ -5,11 +6,11 @@
 //     menu: '#menu'
 //   });
 // });
-$(document).ready(function() {
-	$('#right-roll').fullpage({
-		slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
-		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-		menu: '#menu',
+$(document).ready(function () {
+  $('#right-roll').fullpage({
+    slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+    anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+    menu: '#menu',
     continuousVertical: true,
     afterLoad: function (anchorLink, index) {
       if (index == 3) {
@@ -41,5 +42,5 @@ $(document).ready(function() {
         }, 800, 'easeOutExpo');
       }
     }
-	});
+  });
 });
