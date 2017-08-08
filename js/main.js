@@ -6,6 +6,9 @@
 //     menu: '#menu'
 //   });
 // });
+window.onload = function () {
+
+
 $(document).ready(function () {
   $('#right-roll').fullpage({
     slidesColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
@@ -44,3 +47,4 @@ $(document).ready(function () {
     }
   });
 });
+}
